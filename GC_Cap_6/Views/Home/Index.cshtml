@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<table border="1" class="table">
+    <tr>
+        <td><a href="/Home/NewTask">Add a Task</a></td>
+        <td>Task</td>
+        <td>Description</td>
+        <td>Done?</td>
+        
+        
+    </tr>
+
+    @foreach (var item in ViewBag.task)
+    {
+        <tr>
+            @*<td><input type="hidden" value="@item.id" name="id"/></td> // this is for forms not tables *@
+            <td><a href="/Home/Switch?id=@item.id">Done</a></td>
+            <td>@item.nameoftask</td>
+            <td>@item.description</td>
+            <td>@item.done</td>
+        </tr>
+    }
+</table>

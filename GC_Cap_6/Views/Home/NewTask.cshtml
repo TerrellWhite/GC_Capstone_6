@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "NewTask";
+}
+
+
+<h2>Add a new task</h2>
+
+<form action="/Home/SaveNewTask" method="post">
+    @*//post is more secure then get(getput the info into the url)*@
+<label>Task</label><input type="text" name="nameoftask" class="form-control" />
+<label>Description: </label><input type="text" name="description" class="form-control" />
+<input type="submit" value="Save!" class="form-control" />
+</form>
